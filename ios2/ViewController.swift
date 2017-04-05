@@ -9,7 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var showone: UILabel!
+    @IBOutlet weak var showtwo: UILabel!
+    @IBAction func leftone(_ sender: Any) {
+        var score:Int;
+        score = Int(showone.text!)!;
+        if score>0{
+            score = score - 1;
+            showone.text = ("\(score)");
+        }
+}
+    @IBAction func lefttwo(_ sender: Any) {
+        var score:Int;
+        score = Int(showone.text!)!;
+            score = score + 1;
+            showone.text = ("\(score)");
+    }
+    @IBAction func rightone(_ sender: Any) {
+        var score:Int;
+        score = Int(showtwo.text!)!;
+        if score>0{
+            score = score - 1;
+            showtwo.text = ("\(score)");
+        }
+    }
+    @IBAction func righttwo(_ sender: Any) {
+        var score:Int;
+        score = Int(showtwo.text!)!;
+            score = score + 1;
+            showtwo.text = ("\(score)");
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
