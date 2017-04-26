@@ -120,16 +120,16 @@
                                 <rect key="frame" x="232" y="28" width="48" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GO3-hr-Cdn">
-                                <rect key="frame" x="101" y="440" width="152" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oS5-9M-Pe5">
+                                <rect key="frame" x="117" y="449" width="135" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.68148882710000003" green="1" blue="0.84234249049999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="change">
                                     <color key="titleColor" red="0.057928586230000002" green="0.02346592548" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jp2-gr-vve" kind="showDetail" id="r9O-mM-f0l"/>
+                                    <segue destination="jp2-gr-vve" kind="show" id="Fsd-se-z4c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -148,7 +148,7 @@
         <!--View Controller-->
         <scene sceneID="mpD-hz-bsF">
             <objects>
-                <viewController id="jp2-gr-vve" sceneMemberID="viewController">
+                <viewController id="jp2-gr-vve" customClass="ViewController" customModule="ios2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0kn-2W-IGb"/>
                         <viewControllerLayoutGuide type="bottom" id="jnp-fy-wNs"/>
@@ -175,6 +175,9 @@
                                 <state key="normal" title="－">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newleftone:" destination="jp2-gr-vve" eventType="touchUpInside" id="Nvf-fw-ZRc"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2IS-f0-qnh">
                                 <rect key="frame" x="65" y="402" width="45" height="30"/>
@@ -189,6 +192,9 @@
                                 <state key="normal" title="＋">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newlefttwo:" destination="jp2-gr-vve" eventType="touchUpInside" id="Jdn-qR-WuJ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4nu-cS-N7L">
                                 <rect key="frame" x="260" y="403" width="45" height="30"/>
@@ -203,6 +209,9 @@
                                 <state key="normal" title="－">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newrightone:" destination="jp2-gr-vve" eventType="touchUpInside" id="KvR-42-FCq"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6qp-Lg-9CG">
                                 <rect key="frame" x="307" y="403" width="45" height="30"/>
@@ -217,6 +226,9 @@
                                 <state key="normal" title="＋">
                                     <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="newrighttwo:" destination="jp2-gr-vve" eventType="touchUpInside" id="gzZ-pp-QSF"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="great.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="0HT-Sc-vZQ">
                                 <rect key="frame" x="268" y="35" width="48" height="52"/>
@@ -242,25 +254,29 @@
                                 <color key="textColor" red="0.96777814626693726" green="0.023110033944249153" blue="0.19559973478317261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZK-UI-zsK">
-                                <rect key="frame" x="107" y="440" width="152" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyz-MD-2TU">
+                                <rect key="frame" x="137" y="451" width="128" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.68148882710000003" green="1" blue="0.84234249049999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="change">
                                     <color key="titleColor" red="0.057928586230000002" green="0.02346592548" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="SjS-7o-cIH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="PXW-v1-0mN"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="newone" destination="u4h-V0-Vda" id="dxG-4z-v4Y"/>
+                        <outlet property="newtwo" destination="i6o-Io-K8u" id="xJg-QH-Dy3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bu-tB-7JA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696.79999999999995" y="141.67916041979012"/>
+            <point key="canvasLocation" x="695" y="142"/>
         </scene>
     </scenes>
     <resources>

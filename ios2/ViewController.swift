@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var showone: UILabel!
     @IBOutlet weak var showtwo: UILabel!
+    @IBOutlet weak var newone: UILabel!
+    @IBOutlet weak var newtwo: UILabel!
     @IBAction func leftone(_ sender: Any) {
         var score:Int;
         score = Int(showone.text!)!;
@@ -38,6 +40,34 @@ class ViewController: UIViewController {
         score = Int(showtwo.text!)!;
             score = score + 1;
             showtwo.text = ("\(score)");
+    }
+    @IBAction func newleftone(_ sender: Any) {
+        var score:Int;
+        score = Int(newone.text!)!;
+        if score>0{
+            score = score - 1;
+            newone.text = ("\(score)");
+        }
+    }
+    @IBAction func newlefttwo(_ sender: Any) {
+        var score:Int;
+        score = Int(newone.text!)!;
+        score = score + 1;
+        newone.text = ("\(score)");
+    }
+    @IBAction func newrightone(_ sender: Any) {
+        var score:Int;
+        score = Int(newtwo.text!)!;
+        if score>0{
+            score = score - 1;
+            newtwo.text = ("\(score)");
+        }
+    }
+    @IBAction func newrighttwo(_ sender: Any) {
+        var score:Int;
+        score = Int(newtwo.text!)!;
+        score = score + 1;
+        newtwo.text = ("\(score)");
     }
     override func viewDidLoad() {
         super.viewDidLoad()
